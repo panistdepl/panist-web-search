@@ -120,7 +120,20 @@
             showMetadonnee: false,
             showXML: false,
             showMODS: false,
-            showJSON: false
+            showJSON: false,
+            // l'adresse de l'API de l'PANIST
+            panistApi: 'https://api.preprod.panist.fr',
+            // il est possible de mettre le focus sur la barre de recherche au chargement de la page
+            focusInputQueryOnLoad: true,
+            // il est possible de ne charger que certaines facettes
+            // par défaut, on charge seulement: 'corpus','pubdate','copyrightdate','language','categories.wos','categories.inist','score'
+            // 'keywords.teeft','categories.scienceMetrix','categories.scopus' sont également disponibles
+            facetsToLoad: [ 'genre', 'corpusName','publicationDate','copyrightDate','language','score' ],
+            possibleSorts: [
+                {'value':'','name':'Pertinence'},
+                {'value':'publicationDate','name':'Date de publication (croissant)'},
+                {'value':'publicationDate[desc]','name':'Date de publication (décroissant)'}
+            ]
         }
     </script>
     <!-- Dependencies -->
